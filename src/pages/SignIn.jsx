@@ -1,22 +1,29 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// icons
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 
 const SignIn = () => {
+  // state
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  // destructure form data
   const { email, password } = formData;
+  // initialize hook
   const navigate = useNavigate();
+
+  // handle input change
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.id]: e.target.value,
     }));
   };
+
   return (
     <>
       <div className="pageContainer">
@@ -33,6 +40,7 @@ const SignIn = () => {
             onChange={handleChange}
           />
           <div className="passwordInputDiv">
+            {/* if showPassword is true, then change the password input type to text input type */}
             <input
               type={showPassword === true ? "text" : "password"}
               className="passwordInput"
@@ -41,6 +49,7 @@ const SignIn = () => {
               value={password}
               onChange={handleChange}
             />
+
             <img
               src={visibilityIcon}
               alt="show password"
