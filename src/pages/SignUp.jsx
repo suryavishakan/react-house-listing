@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+// react toastify
+import { toast } from "react-toastify";
 // firebase auth
 import {
   getAuth,
@@ -51,7 +53,7 @@ const SignUp = () => {
       await setDoc(doc(db, "users", user.uid), formDataCopy);
       navigate("/");
     } catch (err) {
-      console.log(err);
+      toast.error("Something went wrong 😥");
     }
   };
   return (
