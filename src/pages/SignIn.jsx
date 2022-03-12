@@ -7,6 +7,8 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 // icons
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
+// components
+import GoogleOAuth from "../components/GoogleOAuth";
 
 const SignIn = () => {
   // state
@@ -89,7 +91,9 @@ const SignIn = () => {
             </button>
           </div>
         </form>
-        {/* google authentication */}
+
+        <GoogleOAuth />
+
         <Link to="/sign-up" className="registerLink">
           Sign Up
         </Link>

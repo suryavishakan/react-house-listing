@@ -87,6 +87,10 @@ button {
   right: 20px;
 }
 
+.pageContainer {
+  min-height: 120vh;
+}
+
 .pageContainer,
 .offers,
 .profile,
