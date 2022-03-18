@@ -99,6 +99,7 @@ button {
 .explore {
   margin: 1rem;
 }
+
 @media (min-width: 1024px) {
   .pageContainer,
   .offers,
@@ -309,7 +310,7 @@ button {
 }
 @media (max-height: 536) {
   .explore {
-    margin-bottom: 10rem;
+    margin-bottom: 40rem;
   }
 }
 
@@ -824,4 +825,8 @@ button {
   margin-left: 1rem;
   font-size: 0.8rem;
   opacity: 0.75;
+}
+
+main {
+  padding-bottom: 5rem;
 }

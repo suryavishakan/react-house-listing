@@ -58,6 +58,11 @@ const Listing = () => {
         modules={[Pagination, Scrollbar, A11y]}
         slidesPerView={1}
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
       >
         {listing.imageUrls.map((url, index) => (
           <SwiperSlide key={index}>
